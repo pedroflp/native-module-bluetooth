@@ -14,6 +14,8 @@
 RCT_EXTERN_METHOD(startScan)
 RCT_EXTERN_METHOD(stopScan)
 RCT_EXTERN_METHOD(connectPeripheral:(NSString)peripheralIdentifier)
+RCT_EXTERN_METHOD(disconnectPeripheral:(NSString)peripheralIdentifier)
+RCT_EXTERN_METHOD(transferData)
 
 @end
 

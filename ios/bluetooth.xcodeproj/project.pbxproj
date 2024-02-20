@@ -16,6 +16,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		EB8E51432B4D7FFD00187C41 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E51422B4D7FFD00187C41 /* Bluetooth.swift */; };
 		EB8E51452B4D801500187C41 /* Bluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8E51442B4D801500187C41 /* Bluetooth.m */; };
+		EBE4AD042B75FFC10000F269 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4AD032B75FFC10000F269 /* BluetoothPeripheral.swift */; };
+		EBE4AD062B760D700000F269 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4AD052B760D700000F269 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		EB8E51412B4D7FFD00187C41 /* bluetooth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bluetooth-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB8E51422B4D7FFD00187C41 /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		EB8E51442B4D801500187C41 /* Bluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bluetooth.m; sourceTree = "<group>"; };
+		EBE4AD032B75FFC10000F269 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
+		EBE4AD052B760D700000F269 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,8 @@
 				EB8E51422B4D7FFD00187C41 /* Bluetooth.swift */,
 				EB8E51412B4D7FFD00187C41 /* bluetooth-Bridging-Header.h */,
 				EB8E51442B4D801500187C41 /* Bluetooth.m */,
+				EBE4AD032B75FFC10000F269 /* BluetoothPeripheral.swift */,
+				EBE4AD052B760D700000F269 /* utils.swift */,
 			);
 			name = bluetooth;
 			sourceTree = "<group>";
@@ -400,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE4AD042B75FFC10000F269 /* BluetoothPeripheral.swift in Sources */,
 				EB8E51452B4D801500187C41 /* Bluetooth.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				EBE4AD062B760D700000F269 /* utils.swift in Sources */,
 				EB8E51432B4D7FFD00187C41 /* Bluetooth.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -598,11 +606,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-Wl",
-					"-ld_classic",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -670,11 +674,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-Wl",
-					"-ld_classic",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
